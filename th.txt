@@ -1,0 +1,47 @@
+js:
+
+frontend : html,css,js..
+client: browser
+
+backend :c,cpp,java,python
+-------------------------------
+2 type of programming | scripting language
+
+1)statically typed language  :c,cpp,java,
+2)dynamically typed language :python, js
+
+justfy the statement that java script is dynamically typed language
+
+compiler and interpreter:
+
+Babel.js
+
+js was develope by netscape communication corporation
+firefox
+
+browser engines:
+spider monkey :firefox
+v8 :chrome
+chakra :edge
+javascript core :safari
+
+-------------------------------
+internal js
+external js .js
+
+
+use of js:
+limitation of html and css :
+
+    DOM: document object model
+    
+
+
+
+3 keywods:
+var : global scope
+let : block scope
+const : block scope
+
+
+number
