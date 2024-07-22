@@ -42,6 +42,24 @@ limitation of html and css :
 var : global scope
 let : block scope
 const : block scope
-
-
 number
+
+operators:
+operators are symbols that perform operations on operands.
+type of operators:
+unary operator : 1 operand
+binary operator : 2 operand
+ternary operator : 3 operand
+
+------------------------------
+types:
+1)arithmetic operators : +,-,*,/,%,++,--
+2)assignment operators : =,+=,-=,*=,/=,%=, **=
+3)comparison operators : ==,===,!=,!==,>,<,>=,<=
+4)logical operators : &&,||,!
+5)bitwise operators : &,|,^,~,<<,>>
+6)string operators : +
+7)conditional operators : ?:
+8)typeof operator : typeof
+
+
