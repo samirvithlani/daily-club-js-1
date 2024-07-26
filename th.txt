@@ -61,5 +61,15 @@ types:
 6)string operators : +
 7)conditional operators : ?:
 8)typeof operator : typeof
+----------------------------------------------------
 
+question:
+product:
+county:
+
+
+functions
+string
+array
+json array
 
