@@ -73,3 +73,9 @@ string
 array
 json array
 
+------------------------
+multi thread:
+
+javascript follows single thread model
+:callback function
+
