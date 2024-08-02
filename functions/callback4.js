@@ -16,10 +16,11 @@ const uploadFile =(fileName,callback)=>{
 
 
     //console.log(`${fileName} is uploaded`);
+    //console.log(fileName +" is uploaded");
     //pdfHandler(fileName);
-    //var x = callback(fileName);
-    //console.log(x);
-    //return x;
+    // var x = callback(fileName);
+    // //console.log(x);
+    // return x;
 
     return callback(fileName);
 
