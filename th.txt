@@ -78,4 +78,8 @@ multi thread:
 
 javascript follows single thread model
 :callback function
+-----------------------------------------------------------
+
+array:
+collection of  type of elements
 
