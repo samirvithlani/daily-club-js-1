@@ -1,20 +1,65 @@
+var numbers = [1, 2, 3, 4, 5, 6];
 
-var numbers = [1,2,3,4,5,6]
+const getData = () => {
+  console.log("called...");
 
-const getData = ()=>{
-console.log("called...")
-    //12.22
-    //Math.floor(12.22) = 12
-    //random number
-    //var randomNo = Math.floor(Math.random()*numbers.length-1)
-    var randomIndex = Math.floor(Math.random()*numbers.length)
-    //console.log(randomIndex)
+  var randomIndex = Math.floor(Math.random() * numbers.length);
+  var x = numbers[randomIndex];
+  console.log(x);
 
-    var x = numbers[randomIndex]
-    console.log(x)
+  var p = document.getElementById("txt");
 
-    var p = document.getElementById("txt")
-    p.innerHTML = x
+  if (x == 1) {
+    p.innerHTML = `   *   `;
+  } else if (x == 2) {
+    p.innerHTML = `*   *`;
+  } else if (x == 3) {
+    p.innerHTML = `*   *<br>  *  `;
+  } else if (x == 4) {
+    p.innerHTML = `*     *\n*     *`;
+  } else if (x == 5) {
+    p.innerHTML = `*   *\n  *  \n*   *`;
+  } else if (x == 6) {
+    p.innerHTML = `*   *\n*   *\n*   *`;
+  } else {
+    p.innerHTML = `. . . . . . .`;
+  }
+};
 
+const startControl = () => {
+ 
 
-}
+  var x = setInterval(() => {
+    
+    var randomIndex = Math.floor(Math.random() * numbers.length);
+    var x = numbers[randomIndex];
+    console.log(x);
+
+    var p = document.getElementById("txt");
+
+    if (x == 1) {
+      p.innerHTML = `   *   `;
+      p.style.backgroundColor = "red";
+    } else if (x == 2) {
+      p.innerHTML = `*   *`;
+      p.style.backgroundColor = "green";
+    } else if (x == 3) {
+      p.innerHTML = `*   *<br>  *  `;
+      p.style.backgroundColor = "blue";
+    } else if (x == 4) {
+      p.innerHTML = `*     *\n*     *`;
+      p.style.backgroundColor = "brown";
+    } else if (x == 5) {
+      p.innerHTML = `*   *\n  *  \n*   *`;
+      p.style.backgroundColor = "orange";
+    } else if (x == 6) {
+      p.innerHTML = `*   *\n*   *\n*   *`;
+      p.style.backgroundColor = "purple";
+    } else {
+      p.innerHTML = `. . . . . . .`;
+    }
+  }, 500);
+
+ 
+  
+};
