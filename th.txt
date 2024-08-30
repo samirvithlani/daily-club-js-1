@@ -83,3 +83,6 @@ javascript follows single thread model
 array:
 collection of  type of elements
 
+
+window
+document object model:
