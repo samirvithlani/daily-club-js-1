@@ -86,3 +86,7 @@ collection of  type of elements
 
 window
 document object model:
+
+1)task : array [emails,",",",","]
+email taken...
+email is available or not
