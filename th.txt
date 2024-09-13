@@ -90,3 +90,13 @@ document object model:
 1)task : array [emails,",",",","]
 email taken...
 email is available or not
+
+input
+formula
+digit*digit
+12*12
+24
+
+
+input [box]
+circle
