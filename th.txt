@@ -100,3 +100,13 @@ digit*digit
 
 input [box]
 circle
+
+
+blood donation form
+
+donor name
+donor age
+boood group valid..
+gender 
+weight 45 kg
+any disease if yes print the name of disease
