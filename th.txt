@@ -115,5 +115,3 @@ any disease if yes print the name of disease
 
 calculator
 buttons//button id ---> document.get
-
-
