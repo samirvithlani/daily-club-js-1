@@ -21,18 +21,34 @@ var users = [
 ]
 
 
-const addUserToTable = () => {
+const addUser=()=>{
+
+//    alert('Add User button clicked')
+    const userObj ={
+        id:Math.floor(Math.random()*1000),
+        name: 'Kiran',
+        age: 40,
+        status: 'active'
+    }
+    users.push(userObj)
+
+    addUserToTable(userObj)
+
+}
+
+
+const addUserToTable = (user) => {
     const tableBody = document.getElementById('table-body');
-    for(let i=0;i<users.length;i++){
+    
         const tr = document.createElement('tr')
         const idTd = document.createElement('td')//<td></td>
-        idTd.innerHTML = users[i].id
+        idTd.innerHTML = user.id
         const nameTd = document.createElement('td')//<td></td>
-        nameTd.innerHTML = users[i].name
+        nameTd.innerHTML = user.name
         const ageTD = document.createElement('td')
-        ageTD.innerHTML = users[i].age
+        ageTD.innerHTML = user.age
         const statusTD = document.createElement('td')
-        statusTD.innerHTML = users[i].status
+        statusTD.innerHTML = user.status
 
         const actionTD = document.createElement('td')//<td></td>
 
@@ -41,7 +57,7 @@ const addUserToTable = () => {
         infoButton.className = 'btn btn-info'
 
         infoButton.addEventListener('click',()=>{
-            alert("button clicked " + users[i].id)
+            alert("button clicked " + user.id)
         })
 
 
@@ -55,15 +71,16 @@ const addUserToTable = () => {
         tr.appendChild(actionTD)
         
         tableBody.appendChild(tr)
-    }
-    
 }
+    
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
 
     console.log("DOM fully loaded and parsed");
-    
-    addUserToTable()
+    users.forEach((user)=>{
+        addUserToTable(user)
+    })
    
 })
