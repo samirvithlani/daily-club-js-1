@@ -21,9 +21,22 @@ var users = [
 ]
 
 
-const addUser=()=>{
-
+const addUser=(event)=>{
+//event.preventDefault()
 //    alert('Add User button clicked')
+
+//cosnt id =document.getElementById('id').value
+//const name =document.getElementById('name').value
+//const age =document.getElementById('age').value
+//const status =document.getElementById('status').value
+
+// const userObj = {
+//     id:id,
+//     name:name,
+//     age:age,
+//     status:status
+// }
+
     const userObj ={
         id:Math.floor(Math.random()*1000),
         name: 'Kiran',
@@ -35,6 +48,8 @@ const addUser=()=>{
     addUserToTable(userObj)
 
 }
+
+
 
 
 const addUserToTable = (user) => {
@@ -56,12 +71,25 @@ const addUserToTable = (user) => {
         infoButton.innerHTML = 'Info'
         infoButton.className = 'btn btn-info'
 
+        const deleteButton = document.createElement('button')//<button></button>
+        deleteButton.innerHTML = 'Delete'
+        deleteButton.className = 'btn btn-danger'
+        deleteButton.style.marginLeft = '10px'
+
         infoButton.addEventListener('click',()=>{
             alert("button clicked " + user.id)
         })
 
+        deleteButton.addEventListener('click',()=>{
+            
+            
+            tr.remove()
+
+        })
+
 
         actionTD.appendChild(infoButton) //<td><button>Info</button></td>
+        actionTD.appendChild(deleteButton) //<td><button>Info</button><button>Delete</button></td>
 
 
         tr.appendChild(idTd)
