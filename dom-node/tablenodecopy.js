@@ -76,20 +76,37 @@ const addUserToTable = (user) => {
         deleteButton.className = 'btn btn-danger'
         deleteButton.style.marginLeft = '10px'
 
+        const editButton = document.createElement('button')//<button></button>
+        editButton.innerHTML = 'Edit'
+        editButton.className = 'btn btn-warning'
+        editButton.style.marginLeft = '10px'
+
         infoButton.addEventListener('click',()=>{
             alert("button clicked " + user.id)
         })
 
-        deleteButton.addEventListener('click',()=>{
-            
-            
+        deleteButton.addEventListener('click',()=>{  
             tr.remove()
+        })
+
+        editButton.addEventListener('click',()=>{
+            
+            //get form element and set value
+            const id = document.getElementById('id')
+            id.value = user.id
+            id.disabled = true
+            const nameInput = document.getElementById('name')
+            nameInput.value = user.name
+            const ageInput = document.getElementById('age')
+            ageInput.value = user.age
+            
 
         })
 
 
         actionTD.appendChild(infoButton) //<td><button>Info</button></td>
         actionTD.appendChild(deleteButton) //<td><button>Info</button><button>Delete</button></td>
+        actionTD.appendChild(editButton) //<td><button>Info</button><button>Delete</button><button>Edit</button></td>
 
 
         tr.appendChild(idTd)
@@ -112,3 +129,31 @@ document.addEventListener('DOMContentLoaded', function() {
     })
    
 })
+
+const updateUser = (event) => {
+    event.preventDefault()
+
+    const id = document.getElementById('id').value //1 string...
+    const name = document.getElementById('name').value //John Doe
+    const age = document.getElementById('age').value //25
+
+
+    const user = users.find((user)=>user.id == id) //number
+    console.log(user)
+    if(user){
+
+        console.log('user found')
+        user.name = name
+        user.age = age
+
+    }
+    //clear table..
+    const tableBody = document.getElementById('table-body')
+    tableBody.innerHTML = ''
+
+    //re-render table
+    users.forEach((user)=>{
+        addUserToTable(user)
+    })
+
+}
