@@ -130,8 +130,9 @@ document.addEventListener('DOMContentLoaded', function() {
    
 })
 
-const updateUser = (event) => {
+const updateUser = (event,a) => {
     event.preventDefault()
+    console.log(a)
 
     const id = document.getElementById('id').value //1 string...
     const name = document.getElementById('name').value //John Doe
