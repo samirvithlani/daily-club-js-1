@@ -29,7 +29,7 @@ const getData = () => {
 const startControl = () => {
  
 
-  var x = setInterval(() => {
+  
     
     var randomIndex = Math.floor(Math.random() * numbers.length);
     var x = numbers[randomIndex];
@@ -58,7 +58,7 @@ const startControl = () => {
     } else {
       p.innerHTML = `. . . . . . .`;
     }
-  }, 500);
+  
 
  
   
