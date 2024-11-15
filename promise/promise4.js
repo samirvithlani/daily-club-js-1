@@ -1,9 +1,12 @@
 //student data
 //marks
 //print ceritifate
+//json array of students
+//marks array:{name:"preeeti",marks:90}
 
 
-const searchStudentData = ()=>{
+
+const searchStudentData = (name)=>{
 
     console.log("********Sararching Student Data************");
     return new Promise((resolve,reject)=>{
@@ -45,10 +48,10 @@ const fetchMarks = (studentName)=>{
 
 
 
-const printCertificate = ()=>{
+const printCertificate = (name)=>{
     console.log("********Welcome to Certificate Print************");
 
-    var student = searchStudentData()
+    var student = searchStudentData(name)
     student.then((data)=>{
 
         console.log("Student found",data)
@@ -61,7 +64,7 @@ const printCertificate = ()=>{
             console.log("Marks not found")
         })
     })
-    
+
     student.catch((data)=>{
         console.log("Student not found")
     })
@@ -72,4 +75,4 @@ const printCertificate = ()=>{
 
 }
 
-printCertificate()
+printCertificate("preeti")
