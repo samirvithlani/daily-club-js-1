@@ -3,18 +3,19 @@ const zomato = () => {
 
   var promise = new Promise((resolve, reject) => {
         setTimeout(()=>{
-            //resolve("Pizza")
-            //reject("Pizza not found")
-            resolve({
-                dish: "Pizza",
-                restaurant: "xyz",
-                order: "undefined",
-                payment: "done",
-                delivery: "done",
-                deliveryStatus: "delivered"
-            })
+            resolve("Pizza")
+            // //reject("Pizza not found")
+            // resolve({
+            //     dish: "Pizza",
+            //     restaurant: "xyz",
+            //     order: "undefined",
+            //     payment: "done",
+            //     delivery: "done",
+            //     deliveryStatus: "delivered"
+            // })
         },3000)
   });
+  
   promise.then((data) => {
     console.log("Dish found is " , data);
   });
