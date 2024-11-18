@@ -18,3 +18,6 @@ promise have 3 state
 pending
 resolve
 reject
+
+
+async await:
