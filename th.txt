@@ -115,3 +115,18 @@ any disease if yes print the name of disease
 
 calculator
 buttons//button id ---> document.get
+
+API:
+application programming interface
+
+data display:
+data create
+data update
+data delete
+
+backend:
+data display : database detch --> api-->GET
+
+
+androind form: submit -->data -->[api] --> google server
+backend POST --> frontend POST
