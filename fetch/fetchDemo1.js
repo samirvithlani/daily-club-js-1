@@ -14,3 +14,15 @@ const getUserData = async () => {
 
 }
 getUserData()
+
+
+//https://fake-json-api.mock.beeceptor.com/users
+//const users = await res.json();
+
+// var newData = users.map((user)=>{
+//     return({
+//         name:user.name,
+
+//     })
+// })
+// console.log(newData)

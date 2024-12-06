@@ -130,3 +130,45 @@ data display : database detch --> api-->GET
 
 androind form: submit -->data -->[api] --> google server
 backend POST --> frontend POST
+
+
+
+
+API: application programming interface:
+frontend tech :- javascript,html, :- framewroks: angulat, react js..
+backend  tech :- c,cpp,java,python, :- spring,django,flask,node,express,
+
+NETFLIX : browser : frontend 
+        : logical part : data fetch : backend
+
+JSP-SERVELET : java JSP : frontend,servlet backend 
+js,....: dynamic data:
+
+frontend: backend
+js :  bridge  java
+       url
+       data bind...
+       API
+
+API DEVELOPE: produce:
+api use: consume
+
+API methods:
+            frontend      BACKEND
+GET          fetch         send
+POST         create        receive 
+PUT          UPDATE        UPDATE
+DELETE       DELETE        DELETE
+
+
+
+androind girnar : register :
+form [] data -->android :POST
+        java -->mysql -->
+        expose : domain/createData :POST
+
+
+java -->api --->js
+        JSON
+
+API --> call --> DATA time..
