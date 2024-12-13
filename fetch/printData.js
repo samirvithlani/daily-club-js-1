@@ -14,30 +14,56 @@ document.addEventListener("DOMContentLoaded", async () => {
   var data = await res.json();
   console.log(data);
 
-  document.getElementById("sorting").addEventListener("click",()=>{
+  document.getElementById("sorting").addEventListener("click", () => {
+    const sortedProduct = data.products.sort((a, b) => a.price - b.price);
+    const tbody = document.getElementById("tbody");
+    tbody.innerHTML = "";
+    renderData(sortedProduct);
+    console.log(sortedProduct);
+  });
 
-    const sortedProduct = data.products.sort((a,b)=>a.price-b.price)
-    const tbody = document.getElementById("tbody")
-    tbody.innerHTML = ""
-    renderData(sortedProduct)
-    console.log(sortedProduct)
+  const searchTitle = document.getElementById("searchTitle")
+
+  searchTitle.addEventListener("keyup",()=>{
+    //console.log(searchTitle.value)
+    // const searchData = data.products.filter((prod)=>{
+    //     return prod.title.includes(searchTitle.value)
+    // }) //case sensitive
+    //convert title to upper | lower case inssde prod objcce
+
+    const searchProduct = data.products.map((product)=>{
+        //return product.title.toLowerCase();
+        return {
+            ...product,
+            title:product.title.toLowerCase()
+        }
+    }).filter((pr)=>{
+        return pr.title.includes(searchTitle.value)
+    })
+
+    console.log(searchProduct)
+
+    const tbody = document.getElementById("tbody");
+    tbody.innerHTML = "";
+    renderData(searchProduct);
+    //console.log("search data..",searchData)
+
   })
 
 
+  
 
-  const renderData = (products)=>{
-    
+  const renderData = (products) => {
     products.forEach((product) => {
-        createRow(product);
-      });
-  }
+      createRow(product);
+    });
+  };
 
-  renderData(data.products)
+  renderData(data.products);
 
-
-//   data.products.forEach((product) => {
-//     createRow(product);
-//   });
+  //   data.products.forEach((product) => {
+  //     createRow(product);
+  //   });
 });
 
 const createRow = (product) => {
