@@ -174,3 +174,25 @@ java -->api --->js
 API --> call --> DATA time..
 
 
+API call --> application prog interface
+
+js -->frontend support -->dynamic data: darabase --> js
+
+API ->call -> URL --> methods --> data
+
+API methods:
+GET : fetch -->frontend display
+POST: frontend -->data --> backend -->db store..
+PUT : update -->fe -->be
+DELETE:delete
+
+API --> weather --> satt =-> data -> json --> wetaher
+
+zomato ,swiggy --> map -> api --> map -->api --> data->
+
+API --> Data -->JSON
+
+FETCH function
+
+
+
