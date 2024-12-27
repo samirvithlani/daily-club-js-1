@@ -196,3 +196,13 @@ FETCH function
 
 
 
+API --> application programming interfacre
+URL : --> data provide:
+
+GET : backed data fetch  -->display   backed dev:GET
+POST: android application form : data fill ---> node js -->database --> backend POST 
+PUT : fe data update :
+DELETE: delete..
+
+
+fetch() ->function
